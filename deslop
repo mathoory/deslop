@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 # Lint prose for AI-writing tells: Vale (ai-tells + proselint + Claudisms), then the proselint CLI.
-# Usage: delint <file or folder>...      Exit code 1 if anything was flagged.
+# Usage: deslop <file or folder>...      Exit code 1 if anything was flagged.
 set -u
 DIR="$(cd "$(dirname "$(readlink -f "${BASH_SOURCE[0]}")")" && pwd)"
-if [ $# -eq 0 ]; then echo "usage: delint <file or folder>..." >&2; exit 2; fi
+if [ $# -eq 0 ]; then echo "usage: deslop <file or folder>..." >&2; exit 2; fi
 if [ ! -d "$DIR/styles/ai-tells" ]; then vale --config "$DIR/.vale.ini" sync >/dev/null; fi
 status=0
 vale --config "$DIR/.vale.ini" --output line "$@" || status=1

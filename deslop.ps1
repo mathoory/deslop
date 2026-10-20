@@ -1,7 +1,7 @@
 # Lint prose for AI-writing tells: Vale (ai-tells + proselint + Claudisms), then the proselint CLI.
-# Usage: delint <file or folder>...      Exit code 1 if anything was flagged.
+# Usage: deslop <file or folder>...      Exit code 1 if anything was flagged.
 $dir = $PSScriptRoot
-if ($args.Count -eq 0) { Write-Error "usage: delint <file or folder>..."; exit 2 }
+if ($args.Count -eq 0) { Write-Error "usage: deslop <file or folder>..."; exit 2 }
 if (-not (Test-Path "$dir/styles/ai-tells")) { vale --config "$dir/.vale.ini" sync | Out-Null }
 $status = 0
 vale --config "$dir/.vale.ini" --output line @args

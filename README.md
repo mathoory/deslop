@@ -1,8 +1,8 @@
-# prose-lint
+# deslop
 
 Catch AI-writing tells in docs, reports and READMEs, in any repo, on Linux or Windows.
 
-`delint <files>` runs [Vale](https://vale.sh) with three rule sets, then the
+`deslop <files>` runs [Vale](https://vale.sh) with three rule sets, then the
 [proselint](https://github.com/amperser/proselint) CLI:
 
 | Style | Source | What it catches |
@@ -15,15 +15,15 @@ Catch AI-writing tells in docs, reports and READMEs, in any repo, on Linux or Wi
 Requirements: [Vale](https://vale.sh/docs/install), plus optionally `pip install proselint`. The scripts don't install or configure anything outside this folder.
 
 ```bash
-bash path/to/prose-lint/delint README.md docs/        # Linux / macOS / Git Bash
+bash path/to/deslop/deslop README.md docs/        # Linux / macOS / Git Bash
 ```
 ```powershell
-path\to\prose-lint\delint.ps1 README.md docs\         # Windows PowerShell
+path\to\deslop\deslop.ps1 README.md docs\         # Windows PowerShell
 ```
 - **Arguments:** files or folders.
 - **Exit code:** 1 if anything was flagged.
 - **First run:** downloads the published styles into `styles/` here, which git ignores.
-- **Updating those styles:** `vale --config path/to/prose-lint/.vale.ini sync`
+- **Updating those styles:** `vale --config path/to/deslop/.vale.ini sync`
 
 `skills/de-ai/SKILL.md` is an optional Claude Code skill. To use it in a project, copy it into that
 project's `.claude/skills/de-ai/`.
