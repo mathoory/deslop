@@ -11,27 +11,22 @@ Catch AI-writing tells in docs, reports and READMEs, in any repo, on Linux or Wi
 | `proselint` | Vale's proselint package (fetched by `vale sync`) | clichés, corporate speak, redundancy |
 | `Claudisms` | ours, `styles/Claudisms/`, based on [claudisms.ai](https://claudisms.ai) | phrases, words and metaphors from that list that ai-tells misses, plus em-dashes |
 
-## Setup (once per machine)
-Requirements: [Vale](https://vale.sh/docs/install), plus optionally `pip install proselint`.
+## Use
+Requirements: [Vale](https://vale.sh/docs/install), plus optionally `pip install proselint`. The scripts don't install or configure anything outside this folder.
 
 ```bash
-git clone https://github.com/mathoory/prose-lint.git
-./prose-lint/install.sh            # Linux / macOS / Git Bash
+bash path/to/prose-lint/delint README.md docs/        # Linux / macOS / Git Bash
 ```
 ```powershell
-.\prose-lint\install.ps1           # Windows PowerShell
+path\to\prose-lint\delint.ps1 README.md docs\         # Windows PowerShell
 ```
-The installer:
-1. Downloads the published styles.
-2. Sets `VALE_CONFIG_PATH` to this repo's `.vale.ini`, so a plain `vale <file>` uses it anywhere.
-3. Adds a `delint` command to your shell.
+- **Arguments:** files or folders.
+- **Exit code:** 1 if anything was flagged.
+- **First run:** downloads the published styles into `styles/` here, which git ignores.
+- **Updating those styles:** `vale --config path/to/prose-lint/.vale.ini sync`
 
-## Use
-```bash
-delint README.md docs/            # files or folders; exit code 1 if anything was flagged
-vale sync                         # update the published styles
-```
-In a repo that has its own `.vale.ini`, plain `vale` uses that file. `delint` always uses this repo's config.
+`skills/de-ai/SKILL.md` is an optional Claude Code skill. To use it in a project, copy it into that
+project's `.claude/skills/de-ai/`.
 
 ## Adding rules
 Add tokens to the files in `styles/Claudisms/`:

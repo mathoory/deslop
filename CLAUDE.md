@@ -3,7 +3,8 @@
 Instructions for an agent asked to "de-AI" prose with this repo.
 
 ## Run it
-- **Command:** `delint <files or folders>` if it's installed. Otherwise call the script directly: `bash <this repo>/delint <files>` (Linux, macOS, Git Bash) or `<this repo>/delint.ps1 <files>` (PowerShell).
+- **Command:** `bash <this repo>/delint <files or folders>` (Linux, macOS, Git Bash) or `<this repo>/delint.ps1 <files or folders>` (PowerShell).
+- **No installs.** Don't install packages or change shell profiles or environment variables. The script uses only this repo's config.
 - **Output:** one hit per line, as `file:line:col:Style.Rule:message`. Exit code 1 means something was flagged.
 - **Where:** run it on prose only (Markdown, text, HTML). In HTML, only fix visible text, not markup or scripts.
 
