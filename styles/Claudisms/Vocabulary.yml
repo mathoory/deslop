@@ -1,0 +1,31 @@
+extends: existence
+message: "'%s' is an AI-favored word. Use the plain word or the concrete fact."
+level: suggestion
+ignorecase: true
+tokens:
+  - delve
+  - dive into
+  - deep dive
+  - underscor(?:e|es|ing)
+  - foster(?:s|ing)?
+  - pivotal
+  - transformative
+  - game-changing
+  - groundbreaking
+  - cutting-edge
+  - robust
+  - seamless(?:ly)?
+  - intricate
+  - comprehensive
+  - holistic
+  - realm
+  - (?:a|is a) testament to
+  - harness(?:es|ing)?
+  - leverag(?:e|es|ing)
+  - unpack(?:s|ing)?
+  - throughline
+  - honest(?:ly)?
+  - quietly
+  - compound(?:s|ing)
+  - landscape
+  - navigat(?:e|es|ing) the

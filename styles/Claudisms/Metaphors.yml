@@ -1,0 +1,14 @@
+extends: existence
+message: "Figurative '%s'. Say literally what happens."
+level: suggestion
+ignorecase: true
+tokens:
+  - the shape of
+  - lives (?:in|at|somewhere)
+  - surfac(?:e|es|ing) (?:the|a|an)
+  - the real (?:problem|thing|question|issue|story)
+  - turns on
+  - rides (?:on|along)
+  - reach(?:es|ing)? for
+  - (?:quieter|louder) (?:version|claim|point)
+  - names (?:the|what)

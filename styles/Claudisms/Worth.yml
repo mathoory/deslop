@@ -1,0 +1,7 @@
+extends: existence
+message: "'%s' rates the thing instead of saying what it does. State the fact or the action."
+level: warning
+ignorecase: true
+tokens:
+  - 'worth (?:noting|mentioning|asking|a look|a try|it|the|talking about|considering|exploring|examining|making|drawing|checking|sitting with|keeping)'
+  - "it's worth"

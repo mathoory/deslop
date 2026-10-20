@@ -1,0 +1,6 @@
+extends: existence
+message: "Em-dash. Use a comma, a period, parentheses or a colon. (En-dashes in ranges like 'Jan–Feb' are fine.)"
+level: error
+nonword: true
+tokens:
+  - '—'

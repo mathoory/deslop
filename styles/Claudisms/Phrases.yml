@@ -1,0 +1,67 @@
+extends: existence
+message: "Stock phrase '%s'. Cut it or say the thing plainly."
+level: warning
+ignorecase: true
+tokens:
+  # reflective posing
+  - sit with
+  - sitting with
+  - (?:keep|keeps|kept) coming back to
+  - brings? (?:me|us) back to
+  - (?:keep|keeps) arriving at
+  - can't unsee
+  - (?:stuck|stayed) with me
+  - struck a (?:chord|nerve)
+  - hit a nerve
+  - surprised me most
+  - struck me (?:most|hardest)
+  - I can't stop thinking about
+  - (?:here's|here is) where I (?:landed|come down)
+  - leave you with
+  - seen this movie before
+  # framing and throat-clearing
+  - the point is
+  - here's where it gets interesting
+  - here's the thing
+  - (?:this|that|because it) matters
+  - it's important to note
+  - when it comes to
+  - at its core
+  - this is where \w+ comes in
+  - let's break (?:it|this) down
+  - let's explore
+  - now let's turn to
+  - moving on to
+  - cannot be overstated
+  - great question
+  - in today's rapidly evolving
+  - key takeaways
+  - (?:three|five) things to know
+  # crowned superlatives and totalizing
+  - the best thing you can do
+  - helps most
+  - pays off most
+  - (?:hits|lands|strikes) (?:the )?hardest
+  - the whole (?:game|ballgame|point)
+  - the only thing that (?:matters|mattered|changed)
+  - the entire point
+  # stock metaphors
+  - the physics of
+  - the engine of
+  - load-bearing
+  - doing the (?:work|heavy lifting)
+  - hand-waving
+  - nobody handed
+  - lessons learned
+  - paradigm shift
+  - north star
+  - true north
+  - pressure-test
+  - right-size
+  - shed light on
+  - pave the way
+  - at the end of the day
+  - double-click on
+  - lean (?:into|in to)
+  - that's the tell
+  - the tell is
